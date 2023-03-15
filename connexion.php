@@ -35,6 +35,8 @@ if (isset($_POST['submit'])) {
 
     $User->isConnected();
 
+    header('Location: connexion.php');
+
 }
 // var_dump($_SESSION);
 
