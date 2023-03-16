@@ -15,10 +15,10 @@ require_once('User.php');
 <body>
     
 <form action="" method="post">
-    <label for="name">login = </label>
+    <label for="name">login</label>
     <input type="text" name="login" id="login" required>
 
-    <label for="password">password = </label>
+    <label for="password">password</label>
     <input type="password" name="password" id="password" required>
 
     <input type="submit" name="submit" value="S'inscrire">

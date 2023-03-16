@@ -22,6 +22,7 @@ if (isset($_SESSION['user'])) { ?>
 <?php
 
 if (isset($_POST['submit'])) {
+    
     $request = $database->prepare("INSERT INTO articles (article, id_utilisateur) VALUES (?,?)");
     $request->execute([$_POST['article'], $_SESSION['user']['id']]);
 

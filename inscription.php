@@ -15,22 +15,22 @@ require_once("User.php");
 <body>
 
 <form action="" method="post">
-    <label for="name">login = </label>
+    <label for="name">login</label>
     <input type="text" name="login" id="login" required>
 
-    <label for="email">email = </label>
+    <label for="email">email</label>
     <input type="email" name="email" id="email" required>
 
-    <label for="firstname">firstname = </label>
+    <label for="firstname">firstname</label>
     <input type="text" name="firstname" id="firstname" required>
 
-    <label for="lastname">lastname = </label>
+    <label for="lastname">lastname</label>
     <input type="text" name="lastname" id="lastname" required>
 
-    <label for="password">password = </label>
+    <label for="password">password</label>
     <input type="password" name="password" id="password" required>
 
-    <label for="password">confirm password = </label>
+    <label for="password">confirm password</label>
     <input type="password" name="password_confirm" id="password" required>
 
     <input type="submit" name="submit" value="Subscribe">

@@ -98,6 +98,12 @@ class User {
             return false;
         }
     }
+    
+    public function Maj($login, $password, $email, $firstname, $lastname) {
+        
+        $update = $this->bdd->prepare("UPDATE `utilisateurs` SET `login` = ?, `password` = ?, `email` = ?, `firstname` = ?, `lastname` = ? WHERE `utilisateurs`.`id` = ?;");
+        $update->execute([$login, $password, $email, $firstname, $lastname, $_SESSION['user']['id']]);
+    }
 
 }
 
