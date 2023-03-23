@@ -19,11 +19,11 @@ require('card.php');
             <form method="post">
                 <label for="nbcartes">Choix du nombre de cartes</label>
                 <select>
-                    <option value="">4 cartes</option>
-                    <option value="">6 cartes</option>
-                    <option value="">8 cartes</option>
+                    <option value="1">4 cartes</option>
+                    <option value="2">6 cartes</option>
+                    <option value="3">8 cartes</option>
                 </select>
-                <button class="button" type="submit">Commencer la partie</button>
+                <button type="submit">Commencer la partie</button>
             </form>
 
     </div>
@@ -41,3 +41,13 @@ function addNewCard ($add) {
     return $card;
 }
 
+function shuffle($add, $card) {
+    if (empty($_SESSION['order'])) {
+        $_SESSION['order'] = [];
+        for ($i = 0; $i < ($add * 2); $i++) {
+            array_push($_SESSION['order'], $card[$i]);
+        }
+        shuffle($_SESSION['order']);
+    }
+    return $_SESSION['order'];
+}
